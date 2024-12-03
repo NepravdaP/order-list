@@ -8,232 +8,87 @@
   border: 0;
   cursor: pointer;
   width: 100%;
+}
 
-  &.primary {
-    &.light {
-      background-color: map-get($button_colors_light_theme, "primary");
-      color: map-get($font_colors_light_theme, "button_primary");
-      border-color: map-get($button_colors_light_theme, "primary");
+&.secondary_link {
+  border: none;
+  background-color: transparent;
+  padding: 0 !important;
+}
 
-      &:hover {
-        background-color: map-get($button_colors_light_theme, "primary_hover");
-      }
-
-      &:active {
-        background-color: map-get($button_colors_light_theme, "primary_active");
-      }
-
-      &.disabled {
-        background-color: map-get(
-          $button_colors_light_theme,
-          "primary_disabled"
-        );
-      }
-    }
-
-    &.dark {
-      background-color: map-get($button_colors_dark_theme, "primary");
-      color: map-get($font_colors_dark_theme, "button_primary");
-      border-color: map-get($button_colors_dark_theme, "primary");
-
-      &:hover {
-        background-color: map-get($button_colors_dark_theme, "primary_hover");
-        border-color: map-get($button_colors_dark_theme, "primary_hover");
-      }
-    }
-  }
-
-  &.secondary {
-    &.light {
-      color: map-get($font_colors_light_theme, "button_secondary");
-      background-color: map-get($button_colors_light_theme, "secondary");
-
-      &:hover {
-        background-color: map-get(
-          $button_colors_light_theme,
-          "secondary_hover"
-        );
-      }
-
-      &:active {
-        background-color: map-get(
-          $button_colors_light_theme,
-          "secondary_active"
-        );
-      }
-
-      &.disabled {
-        background-color: map-get($button_colors_light_theme, "secondary");
-        color: map-get($font_colors_light_theme, "secondary_disabled");
-
-        .icon {
-          filter: brightness(0) saturate(100%) invert(81%) sepia(8%)
-            saturate(444%) hue-rotate(202deg) brightness(85%) contrast(90%);
-        }
-      }
-    }
-
-    &.dark {
-      color: map-get($font_colors_dark_theme, "primary");
-      border-color: map-get($button_colors_dark_theme, "primary");
-
-      &:hover {
-        color: map-get($button_colors_dark_theme, "primary");
-        border-color: map-get($button_colors_dark_theme, "primary");
-      }
-    }
-
-    &.border {
-      background-color: map-get($button_colors_light_theme, "bordered");
-
-      &.light {
-        color: map-get($font_colors_light_theme, "primary");
-        border-color: map-get($button_colors_light_theme, "secondary_border");
-
-        .icon {
-          filter: brightness(0);
-        }
-
-        &:hover {
-          background-color: map-get(
-            $button_colors_light_theme,
-            "bordered_hover"
-          );
-        }
-
-        &:active {
-          background-color: map-get(
-            $button_colors_light_theme,
-            "bordered_active"
-          );
-        }
-      }
-    }
-  }
-
-  &.secondary_link {
-    border: none;
-    background-color: transparent;
-    padding: 0 !important;
-    &.light {
-      color: map-get($button_colors_light_theme, "primary");
-
-      .icon {
-        filter: brightness(0) saturate(100%) invert(26%) sepia(46%)
-          saturate(5892%) hue-rotate(238deg) brightness(98%) contrast(103%);
-      }
-
-      &:hover {
-        color: map-get($button_colors_light_theme, "primary_hover");
-
-        .icon {
-          filter: brightness(0) saturate(100%) invert(15%) sepia(73%)
-            saturate(4815%) hue-rotate(238deg) brightness(90%) contrast(92%);
-        }
-      }
-
-      &:active {
-        color: map-get($button_colors_light_theme, "primary_active");
-
-        .icon {
-          filter: brightness(0) saturate(100%) invert(10%) sepia(50%)
-            saturate(7376%) hue-rotate(255deg) brightness(87%) contrast(103%);
-        }
-      }
-
-      &.disabled {
-        color: map-get($font_colors_light_theme, "secondary_disabled");
-
-        .icon {
-          filter: brightness(0) saturate(100%) invert(81%) sepia(8%)
-            saturate(444%) hue-rotate(202deg) brightness(85%) contrast(90%);
-        }
-      }
-    }
-  }
-
-  &.secondary_icon {
-    border: 1px solid #cecedb;
+&.secondary_icon {
+  border: 1px solid #cecedb;
+  background-color: #ffffff;
+  &.light {
     background-color: #ffffff;
-    &.light {
-      color: map-get($font_colors_light_theme, "button_secondary");
+
+    &:hover {
+      background-color: #f6f6ff;
+    }
+
+    &:active {
+      background-color: #f3f3f8;
+    }
+
+    &.disabled {
       background-color: #ffffff;
-
-      &:hover {
-        background-color: #f6f6ff;
-      }
-
-      &:active {
-        background-color: #f3f3f8;
-      }
-
-      &.disabled {
-        background-color: #ffffff;
-        color: map-get($font_colors_light_theme, "secondary_disabled");
-
-        .icon {
-          filter: brightness(0) saturate(100%) invert(81%) sepia(8%)
-            saturate(444%) hue-rotate(202deg) brightness(85%) contrast(90%);
-        }
-      }
     }
   }
+}
 
-  &.large {
-    height: 90px;
-    border-radius: 10px;
+&.large {
+  height: 90px;
+  border-radius: 10px;
 
-    padding: 0 40px;
+  padding: 0 40px;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
-  }
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
 
-  &.medium {
-    // height: 65px;
-    // border-radius: 10px;
+&.medium {
+  // height: 65px;
+  // border-radius: 10px;
 
-    // padding: 0 30px;
+  // padding: 0 30px;
 
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 24px;
-    // line-height: 26px;
-    height: 42px;
-    border-radius: 4px;
-    padding: 8px 10px;
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 24px;
+  // line-height: 26px;
+  height: 42px;
+  border-radius: 4px;
+  padding: 8px 10px;
 
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
 
-  &.small {
-    height: 40px;
-    border-radius: 10px;
+&.small {
+  height: 40px;
+  border-radius: 10px;
 
-    padding: 0 10px;
+  padding: 0 10px;
 
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
 
-  &.border {
-    border: 2px solid;
-    width: 100%;
-  }
+&.border {
+  border: 2px solid;
+  width: 100%;
+}
 
-  &.disabled {
-    cursor: not-allowed;
-    color: map-get($font_colors_light_theme, "secondary_disabled");
-  }
+&.disabled {
+  cursor: not-allowed;
+}
 
-  .icon {
-    margin-right: 8px;
-  }
+.icon {
+  margin-right: 8px;
 }
