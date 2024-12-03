@@ -22,7 +22,6 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      background-color: red;
     }
 
     &__active {
@@ -39,4 +38,8 @@
       align-items: center;
     }
   }
+}
+
+.info_block__circle__active {
+  background-color: rgba($color: green, $alpha: 0.7);
 }
